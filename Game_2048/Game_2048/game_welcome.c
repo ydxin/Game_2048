@@ -54,5 +54,42 @@ void DrawRecFrame(int x, int y, int height, int width, int color)
 
 void ChoiceFrame()
 {
+	int n;
+	DrawRecFrame(CHOICE_FRAME_X, CHOICE_FRAME_Y,
+							 CHOICE_FRAME_HEIGHT, CHOICE_FRAME_WIDTH
+							,RED);
+	Color(PINK);
+	GotoXY(25, 12);
+	printf("1.开始游戏");
+	GotoXY(40, 12);
+	printf("2.游戏规则");
+	GotoXY(25, 16);
+	printf("3.按键说明");
+	GotoXY(40, 16);
+	printf("4.退出");
+	GotoXY(21, 22);
+	Color(DEEP_BLUE);
+	printf("请选择[1 2 3 4]:[ ]\b\b");
+	scanf("%d", &n);    //输入选项
+	switch (n)
+	{
+	case 1:
+		         //游戏开始函数
+		break;
+	case 2:
+		     	//游戏规则函数
+		break;
+	case 3:
+		     	//按键说明函数
+		break;
+	case 4:
+		   		//关闭游戏函数
+		break;
+	}
+}
 
+void WelcomeGame()
+{
+	SetTitle();
+	ChoiceFrame();
 }
