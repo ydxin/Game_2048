@@ -1,0 +1,6 @@
+﻿  game_welcome.c
+  main.c
+  public.c
+  正在生成代码...
+F:\GithubSpace\Game_2048.git\trunk\Game_2048\Game_2048\main.c(7,10): warning C4013:  “SetTitle”未定义；假设外部返回 int
+  Game_2048.vcxproj -> F:\GithubSpace\Game_2048.git\trunk\Game_2048\Debug\Game_2048.exe
