@@ -1,6 +1,7 @@
 #include "game_welcome.h"
 #include "public.h"
 #include <stdio.h>
+#include "game_design.h"
 void SetTitle()
 {
 	
@@ -59,37 +60,89 @@ void ChoiceFrame()
 							 CHOICE_FRAME_HEIGHT, CHOICE_FRAME_WIDTH
 							,RED);
 	Color(PINK);
-	GotoXY(25, 12);
+	GotoXY(CHOICE_FRAME_X+10, CHOICE_FRAME_Y+4);
 	printf("1.开始游戏");
-	GotoXY(40, 12);
+	GotoXY(CHOICE_FRAME_X+35, CHOICE_FRAME_Y + 4);
 	printf("2.游戏规则");
-	GotoXY(25, 16);
+	GotoXY(CHOICE_FRAME_X + 10, CHOICE_FRAME_Y + 10);
 	printf("3.按键说明");
-	GotoXY(40, 16);
+	GotoXY(CHOICE_FRAME_X + 35, CHOICE_FRAME_Y + 10);
 	printf("4.退出");
-	GotoXY(21, 22);
-	Color(DEEP_BLUE);
+	GotoXY(CHOICE_FRAME_X+16, CHOICE_FRAME_Y + 13);
+	Color(YELLOW);
 	printf("请选择[1 2 3 4]:[ ]\b\b");
-	scanf("%d", &n);    //输入选项
+	//scanf("%d", &n);    //输入选项
+	n = 1;
 	switch (n)
 	{
 	case 1:
-		         //游戏开始函数
+		PlayGame();         //游戏开始函数
 		break;
 	case 2:
-		     	//游戏规则函数
+		Regulation();     	//游戏规则函数
 		break;
 	case 3:
-		     	//按键说明函数
+		KeyProduction();  //按键说明函数
 		break;
 	case 4:
-		   		//关闭游戏函数
+		Close();			   		//关闭游戏函数
 		break;
 	}
 }
 
+void PlotRabbit()
+{
+	Color(LIGHT_BLUE);
+	GotoXY(RABBIT_X, RABBIT_Y);//70 12
+	printf("┏-┓  ┏-┓");
+	GotoXY(RABBIT_X, RABBIT_Y+1);
+	printf("┃ ┃  ┃ ┃");
+	GotoXY(RABBIT_X, RABBIT_Y+2);
+	printf("┃ ┃  ┃ ┃");
+	GotoXY(RABBIT_X-1, RABBIT_Y+3);
+	printf("_┃");
+	GotoXY(RABBIT_X+7, RABBIT_Y+3);
+	printf("┃_");
+	GotoXY(RABBIT_X-2, RABBIT_Y+4);
+	printf("┃");
+	GotoXY(RABBIT_X+9, RABBIT_Y+4);
+	printf("┃");
+	GotoXY(RABBIT_X-2, RABBIT_Y+5);
+	printf("┃");
+	GotoXY(RABBIT_X+9, RABBIT_Y+5);
+	printf("┃");
+	GotoXY(RABBIT_X-2, RABBIT_Y + 6);
+	printf("┃          ┃");
+	GotoXY(RABBIT_X-2, RABBIT_Y + 7);
+	printf("┗━┳━━━━━━┳━┛");
+	GotoXY(RABBIT_X-2, RABBIT_Y + 8);
+	printf("┏━┫      ┣━┓");
+	Color(LIGHT_GREEN);
+	GotoXY(RABBIT_X-3, RABBIT_Y + 9);
+	printf("—┺┻┻┻┻━┻┻┻┻┹—");
+	Color(DULL_YELLOW);
+	GotoXY(RABBIT_X+1, RABBIT_Y + 3);
+	printf("~  ＇ ~");
+	Color(LIGHT_GREEN);
+	GotoXY(RABBIT_X+1, RABBIT_Y + 4);
+	printf("○   ○");
+	Color(RED);
+	GotoXY(RABBIT_X, RABBIT_Y + 6);
+	printf("〃");
+	GotoXY(RABBIT_X+7, RABBIT_Y + 6);
+	printf("〃");
+	Color(YELLOW);
+	GotoXY(RABBIT_X+4, RABBIT_Y + 6);
+	printf("┻");
+
+}
+
+
 void WelcomeGame()
 {
+	system("cls");
 	SetTitle();
+	PlotRabbit();
 	ChoiceFrame();
+	
 }

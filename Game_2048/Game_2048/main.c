@@ -3,15 +3,11 @@
 int main()
 {
 	
-
 	WelcomeGame();
-
-
-
 
 	Color(RED);
 	GotoXY(GAME_FRAME_X, GAME_FRAME_Y);
-	printf("¡ö");
+	//printf("¡ö");
 	getchar();
 	return 0;
 }

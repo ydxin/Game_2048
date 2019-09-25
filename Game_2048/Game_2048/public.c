@@ -4,8 +4,8 @@
 /*******定  义  全  局  变  量*******/
 int step = 0;				//已执行步数
 int score = 0;			//存储游戏分数
-long int time;			//游戏运行时间
-int box[4][4] = {0};
+long int Time;			//游戏运行时间
+int box[GAME_BOX_SIZE][GAME_BOX_SIZE] = {0};
 HANDLE hOut;			//控制台句柄
 
 void Color(int c)
