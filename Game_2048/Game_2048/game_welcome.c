@@ -71,8 +71,7 @@ void ChoiceFrame()
 	GotoXY(CHOICE_FRAME_X+16, CHOICE_FRAME_Y + 13);
 	Color(YELLOW);
 	printf("请选择[1 2 3 4]:[ ]\b\b");
-	//scanf("%d", &n);    //输入选项
-	n = 1;
+	scanf("%d", &n);    //输入选项
 	switch (n)
 	{
 	case 1:
