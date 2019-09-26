@@ -12,6 +12,8 @@
 #define LINE_NUMS			GAME_BOX_SIZE
 #define LINE_LENGTH			(GAME_BOX_SIZE*LINE_INTERVAL)
 
+#define GAME_INFO_BOX_X	(GAME_BOX_X-22)
+#define GAME_INFO_BOX_Y	(GAME_BOX_Y+5)
 
 
 void DrawLine();

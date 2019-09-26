@@ -83,8 +83,7 @@ void TraversalBox()
 			GotoXY(GAME_DESIGN_X + j * NUM_INTERVAL, GAME_DESIGN_Y + i * NUM_INTERVAL / 2);  //设置棋子显示位置
 			int c = box[i][j];  //获得棋盘上box[i][j]上的数字
 			TextColors(c);  //设置棋子的颜色，不同数字显示不同颜色
-			printf("%d", c);    //打印棋子
-			step++;                 //进行计步
+			printf("%d", c);    //打印棋子	
 		}
 	}
 }
@@ -472,6 +471,9 @@ int GameFailed()
 		GotoXY(failedX, failedY + 14);
 		Color(YELLOW);
 		printf("无法移动，游戏失败！");                             //提示文字
+		GotoXY(failedX, failedY + 16);
+		Color(LIGHT_BLUE_GREEN);
+		printf("你的分数是：%d，用时：%d s，已执行：%d 步", score, Time, step);
 		flag = 1;
 		return flag;                //flag的值正常是0，返回1则表示游戏失败
 	}
@@ -515,15 +517,39 @@ void PlayGame()
 			{
 				continue;
 			}
+			RandomNum();
 			DrawGameBox();       		//绘制棋盘
 			TraversalBox();					//循环整个的棋盘
-			RandomNum();
+			step++;                 //进行计步
 		}
 	
 		if (GameFailed() + GameWin() != 0)  //只要Gamefaile()或者Gamewin()任意一个函数返回1，也就是成功或是失败都会出现下面的内容
 		{
-			//getch();
-			Replay();         //重新游戏函数
+			int n;
+			int x = (GAME_BOX_X - 22);
+			int y = (GAME_BOX_Y + 17);
+			GotoXY(x, y);
+			Color(YELLOW);
+			printf("请输入1或2：");
+			GotoXY(x, y+2);
+			Color(LIGHT_GREEN);
+			printf("1: 我要重新玩一局");
+			GotoXY(x, y+4);
+			Color(PINK);
+			printf("2: 不玩了，退出吧\n");
+			GotoXY(x, y+6);
+			Color(RED);
+			printf("【选择】：");
+			scanf("%d", &n);
+			switch (n)
+			{
+			case 1:
+				Replay();         //重新游戏函数
+				break;
+			case 2:
+				Close();    		//关闭游戏函数
+				break;
+			}
 		}
 	
 	}

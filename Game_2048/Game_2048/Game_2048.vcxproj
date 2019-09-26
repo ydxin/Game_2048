@@ -74,7 +74,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <SDLCheck>true</SDLCheck>
+      <SDLCheck>false</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -123,10 +123,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="game_design.h" />
+    <ClInclude Include="game_main.h" />
     <ClInclude Include="game_welcome.h" />
     <ClInclude Include="public.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="game_design.c" />
+    <ClCompile Include="game_main.c" />
     <ClCompile Include="game_welcome.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="public.c" />

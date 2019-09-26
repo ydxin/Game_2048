@@ -7,7 +7,7 @@
 #define GAME_DESIGN_Y		(GAME_BOX_Y+3)
 #define NUM_INTERVAL			LINE_INTERVAL
 
-#define COLOR_NUM_2			1
+#define COLOR_NUM_2			14
 #define COLOR_NUM_4			2
 #define COLOR_NUM_8			3
 #define COLOR_NUM_16		4
@@ -19,17 +19,17 @@
 #define COLOR_NUM_1024	10
 #define COLOR_NUM_2048	11
 
-#define NUM_2			(2^COLOR_NUM_2)
-#define NUM_4			(2^COLOR_NUM_4)
-#define NUM_8			(2^COLOR_NUM_8)
-#define NUM_16			(2^COLOR_NUM_16)
-#define NUM_32			(2^COLOR_NUM_32)
-#define NUM_64			(2^COLOR_NUM_64)
-#define NUM_128		(2^COLOR_NUM_128)
-#define NUM_256		(2^COLOR_NUM_256)
-#define NUM_512		(2^COLOR_NUM_512)
-#define NUM_1024		(2^COLOR_NUM_1024)
-#define NUM_2048		(2^COLOR_NUM_2048)
+#define NUM_2			2
+#define NUM_4			4
+#define NUM_8			8
+#define NUM_16			16
+#define NUM_32			32
+#define NUM_64			64
+#define NUM_128		128
+#define NUM_256		256
+#define NUM_512		512
+#define NUM_1024		1024
+#define NUM_2048		2048
 
 #define KEY_UP				 72
 #define KEY_DOWN		 80

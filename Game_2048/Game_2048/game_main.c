@@ -26,13 +26,14 @@ void DrawLine(int x,int y,int len,int isHorizontal)
 
 void DrawGameInfo()
 {
-	GotoXY(GAME_BOX_X, GAME_BOX_Y-1);   			//屏幕坐标位置
+
+	GotoXY(GAME_INFO_BOX_X, GAME_INFO_BOX_Y);   			//屏幕坐标位置
 	Color(LIGHT_BLUE_GREEN);      								//淡浅绿色
 	printf("游戏分数: %ld", score);
 	Color(PINK);      														//粉色
-	GotoXY(GAME_BOX_X+24, GAME_BOX_Y - 1);   	//屏幕坐标位置
+	GotoXY(GAME_INFO_BOX_X, GAME_INFO_BOX_Y+4);   	//屏幕坐标位置
 	printf("执行步数: %d\n", step);
-	GotoXY(GAME_BOX_X+20, GAME_BOX_Y+21);
+	GotoXY(GAME_INFO_BOX_X, GAME_INFO_BOX_Y+8);
 	Color(LIGHT_GREEN);												 //绿色
 	printf("已用时：%d s", time(NULL) - Time);				//输出游戏运行时间
 }	
