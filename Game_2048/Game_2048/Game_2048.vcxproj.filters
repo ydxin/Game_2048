@@ -15,33 +15,33 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="public.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="game_welcome.h">
+    <ClInclude Include="game_design.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="game_main.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="game_design.h">
+    <ClInclude Include="game_welcome.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="public.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="public.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="main.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="game_welcome.c">
+    <ClCompile Include="game_design.c">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="game_main.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="game_design.c">
+    <ClCompile Include="game_welcome.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="main.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="public.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
